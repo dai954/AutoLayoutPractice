@@ -9,9 +9,9 @@ import UIKit
 
 class SearchResultCell: UICollectionViewCell {
     
-    let AppIconImage: UIImageView = {
+    let appIconImage: UIImageView = {
         let iv = UIImageView()
-        iv.backgroundColor = .red
+        iv.backgroundColor = .yellow
         iv.widthAnchor.constraint(equalToConstant: 64).isActive = true
         iv.heightAnchor.constraint(equalToConstant: 64).isActive = true
         iv.layer.cornerRadius = 12
@@ -49,6 +49,16 @@ class SearchResultCell: UICollectionViewCell {
         return button
     }()
     
+    lazy var screenShot1ImageView = self.createScreenshotImageView()
+    lazy var screenShot2ImageView = self.createScreenshotImageView()
+    lazy var screenShot3ImageView = self.createScreenshotImageView()
+    
+    func createScreenshotImageView() -> UIImageView {
+        let screenShotImageView = UIImageView()
+        screenShotImageView.backgroundColor = .green
+        return screenShotImageView
+    }
+    
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -58,23 +68,30 @@ class SearchResultCell: UICollectionViewCell {
         ])
         labelStackView.axis = .vertical
         
-        let stackView = UIStackView(arrangedSubviews: [
-            AppIconImage, labelStackView, getButton
+        let infoToptackView = UIStackView(arrangedSubviews: [
+            appIconImage, labelStackView, getButton
         ])
         
-        addSubview(stackView)
+        infoToptackView.spacing = 12
+        infoToptackView.alignment = .center
         
-        stackView.spacing = 12
-        stackView.alignment = .center
+        let screenShotStackView = UIStackView(arrangedSubviews: [
+            screenShot1ImageView, screenShot2ImageView, screenShot3ImageView
+        ])
+        screenShotStackView.spacing = 12
+        screenShotStackView.distribution = .fillEqually
         
-        stackView.translatesAutoresizingMaskIntoConstraints = false
+        let overallStackView = UIStackView(arrangedSubviews: [
+            infoToptackView, screenShotStackView
+        ])
+        overallStackView.axis = .vertical
+        overallStackView.spacing = 16
         
-        stackView.topAnchor.constraint(equalTo: self.topAnchor).isActive = true
-        stackView.leadingAnchor.constraint(equalTo: self.leadingAnchor).isActive = true
-        stackView.bottomAnchor.constraint(equalTo: self.bottomAnchor).isActive = true
-        stackView.trailingAnchor.constraint(equalTo: self.trailingAnchor).isActive = true
+        addSubview(overallStackView)
+        overallStackView.anchor(top: self.topAnchor, leading: self.leadingAnchor, bottom: self.bottomAnchor, trailing: self.trailingAnchor, padding: .init(top: 16, left: 16, bottom: 16, right: 16))
         
     }
+
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
