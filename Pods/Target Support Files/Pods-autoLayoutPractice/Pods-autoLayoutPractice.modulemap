@@ -1,0 +1,6 @@
+framework module Pods_autoLayoutPractice {
+  umbrella header "Pods-autoLayoutPractice-umbrella.h"
+
+  export *
+  module * { export * }
+}

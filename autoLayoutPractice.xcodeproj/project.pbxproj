@@ -19,9 +19,11 @@
 		0942A9BC2677AEE4008AF4CF /* UIView+Layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0942A9BB2677AEE4008AF4CF /* UIView+Layout.swift */; };
 		0942A9C6267910CD008AF4CF /* SearchResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0942A9C5267910CD008AF4CF /* SearchResult.swift */; };
 		0942A9C8267A1D48008AF4CF /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0942A9C7267A1D48008AF4CF /* Service.swift */; };
+		38D3FA6D4F102040230ED547 /* Pods_autoLayoutPractice.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D2B0046077AED2B304BE7E0 /* Pods_autoLayoutPractice.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		005C50D66D4225024DB79130 /* Pods-autoLayoutPractice.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-autoLayoutPractice.release.xcconfig"; path = "Target Support Files/Pods-autoLayoutPractice/Pods-autoLayoutPractice.release.xcconfig"; sourceTree = "<group>"; };
 		0942A9982674C2B2008AF4CF /* autoLayoutPractice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = autoLayoutPractice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0942A99B2674C2B2008AF4CF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0942A99D2674C2B2008AF4CF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -36,6 +38,8 @@
 		0942A9BB2677AEE4008AF4CF /* UIView+Layout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Layout.swift"; sourceTree = "<group>"; };
 		0942A9C5267910CD008AF4CF /* SearchResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResult.swift; sourceTree = "<group>"; };
 		0942A9C7267A1D48008AF4CF /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
+		0D2B0046077AED2B304BE7E0 /* Pods_autoLayoutPractice.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_autoLayoutPractice.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2088D8EE76E8925027F24FEE /* Pods-autoLayoutPractice.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-autoLayoutPractice.debug.xcconfig"; path = "Target Support Files/Pods-autoLayoutPractice/Pods-autoLayoutPractice.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +47,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				38D3FA6D4F102040230ED547 /* Pods_autoLayoutPractice.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -54,6 +59,8 @@
 			children = (
 				0942A99A2674C2B2008AF4CF /* autoLayoutPractice */,
 				0942A9992674C2B2008AF4CF /* Products */,
+				B9051C7F2EE23AB4EBDEC0D0 /* Pods */,
+				B2511015DA531AAD025BC8EE /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -85,6 +92,24 @@
 			path = autoLayoutPractice;
 			sourceTree = "<group>";
 		};
+		B2511015DA531AAD025BC8EE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0D2B0046077AED2B304BE7E0 /* Pods_autoLayoutPractice.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B9051C7F2EE23AB4EBDEC0D0 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2088D8EE76E8925027F24FEE /* Pods-autoLayoutPractice.debug.xcconfig */,
+				005C50D66D4225024DB79130 /* Pods-autoLayoutPractice.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -92,9 +117,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0942A9AC2674C2B4008AF4CF /* Build configuration list for PBXNativeTarget "autoLayoutPractice" */;
 			buildPhases = (
+				898F06C54E51A691561401B7 /* [CP] Check Pods Manifest.lock */,
 				0942A9942674C2B2008AF4CF /* Sources */,
 				0942A9952674C2B2008AF4CF /* Frameworks */,
 				0942A9962674C2B2008AF4CF /* Resources */,
+				990AFEBC38BA9DF2CDF936E5 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -149,6 +176,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		898F06C54E51A691561401B7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-autoLayoutPractice-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		990AFEBC38BA9DF2CDF936E5 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-autoLayoutPractice/Pods-autoLayoutPractice-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-autoLayoutPractice/Pods-autoLayoutPractice-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-autoLayoutPractice/Pods-autoLayoutPractice-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		0942A9942674C2B2008AF4CF /* Sources */ = {
@@ -307,6 +376,7 @@
 		};
 		0942A9AD2674C2B4008AF4CF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2088D8EE76E8925027F24FEE /* Pods-autoLayoutPractice.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -326,6 +396,7 @@
 		};
 		0942A9AE2674C2B4008AF4CF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 005C50D66D4225024DB79130 /* Pods-autoLayoutPractice.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

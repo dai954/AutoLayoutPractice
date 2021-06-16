@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SDWebImage
 
 private let reuseIdentifier = "Cell"
 
@@ -62,10 +63,8 @@ class AppSearchController: UICollectionViewController, UICollectionViewDelegateF
         // Configure the cell
         cell.nameLabel.text = "HERE IS MY NAME"
         
-        let appResult = appResults[indexPath.item]
-        cell.nameLabel.text = appResult.trackName
-        cell.categoryLabel.text = appResult.primaryGenreName
-        cell.ratingLabel.text = "Rating: \(appResult.averageUserRating ?? 0)"
+        cell.appResult = appResults[indexPath.item]
+        
         
         return cell
     }
