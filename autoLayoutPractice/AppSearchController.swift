@@ -21,47 +21,22 @@ class AppSearchController: UICollectionViewController, UICollectionViewDelegateF
 
     }
     
-    struct SearchResult: Decodable {
-        let resultCount: Int
-        let results: [Result]
-    }
+    fileprivate var appResults = [Result]()
     
-    struct Result: Decodable {
-        let trackName: String
-        let primaryGenreName: String
-    }
-    
-
     fileprivate func fetchItunesApps() {
         
-        let urlString = "https://itunes.apple.com/search?term=instagram&entity=software"
-        guard let url = URL(string: urlString) else { return
+        Service.shared.fetchApps(searchTerm: "twitter") { (results, err) in
             
-        }
-        
-        URLSession.shared.dataTask(with: url) { (data, resp, err) in
             if let err = err {
-                print("Failed to fetch apps", err)
+                print("Faild to fetch apps:", err)
             }
             
-//            print(data)
-//            print(String(data: data!, encoding: .utf8))
-//            print(resp)
-//
+            self.appResults = results
             
-            guard let data = data else { return }
-            
-            do {
-                let searchResult = try JSONDecoder().decode(SearchResult.self, from: data)
-                
-                searchResult.results.forEach({ print($0.trackName, $0.primaryGenreName) })
-                
-            } catch let jsonErr {
-                print("Failed to decode json:", jsonErr)
+            DispatchQueue.main.async {
+                self.collectionView.reloadData()
             }
-            
-            
-        }.resume()
+        }
         
     }
 
@@ -78,7 +53,7 @@ class AppSearchController: UICollectionViewController, UICollectionViewDelegateF
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of items
-        return 5
+        return appResults.count
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -86,6 +61,12 @@ class AppSearchController: UICollectionViewController, UICollectionViewDelegateF
     
         // Configure the cell
         cell.nameLabel.text = "HERE IS MY NAME"
+        
+        let appResult = appResults[indexPath.item]
+        cell.nameLabel.text = appResult.trackName
+        cell.categoryLabel.text = appResult.primaryGenreName
+        cell.ratingLabel.text = "Rating: \(appResult.averageUserRating ?? 0)"
+        
         return cell
     }
     

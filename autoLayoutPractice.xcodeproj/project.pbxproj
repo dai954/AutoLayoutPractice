@@ -17,6 +17,8 @@
 		0942A9B82677913F008AF4CF /* AppSearchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0942A9B72677913F008AF4CF /* AppSearchController.swift */; };
 		0942A9BA267795C4008AF4CF /* SearchResultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0942A9B9267795C4008AF4CF /* SearchResultCell.swift */; };
 		0942A9BC2677AEE4008AF4CF /* UIView+Layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0942A9BB2677AEE4008AF4CF /* UIView+Layout.swift */; };
+		0942A9C6267910CD008AF4CF /* SearchResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0942A9C5267910CD008AF4CF /* SearchResult.swift */; };
+		0942A9C8267A1D48008AF4CF /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0942A9C7267A1D48008AF4CF /* Service.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,8 @@
 		0942A9B72677913F008AF4CF /* AppSearchController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSearchController.swift; sourceTree = "<group>"; };
 		0942A9B9267795C4008AF4CF /* SearchResultCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultCell.swift; sourceTree = "<group>"; };
 		0942A9BB2677AEE4008AF4CF /* UIView+Layout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Layout.swift"; sourceTree = "<group>"; };
+		0942A9C5267910CD008AF4CF /* SearchResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResult.swift; sourceTree = "<group>"; };
+		0942A9C7267A1D48008AF4CF /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +72,7 @@
 				0942A99D2674C2B2008AF4CF /* SceneDelegate.swift */,
 				0942A9B52677892A008AF4CF /* BaseTabBarController.swift */,
 				0942A9B72677913F008AF4CF /* AppSearchController.swift */,
+				0942A9C5267910CD008AF4CF /* SearchResult.swift */,
 				0942A9B9267795C4008AF4CF /* SearchResultCell.swift */,
 				0942A9BB2677AEE4008AF4CF /* UIView+Layout.swift */,
 				0942A99F2674C2B2008AF4CF /* ViewController.swift */,
@@ -75,6 +80,7 @@
 				0942A9A42674C2B4008AF4CF /* Assets.xcassets */,
 				0942A9A62674C2B4008AF4CF /* LaunchScreen.storyboard */,
 				0942A9A92674C2B4008AF4CF /* Info.plist */,
+				0942A9C7267A1D48008AF4CF /* Service.swift */,
 			);
 			path = autoLayoutPractice;
 			sourceTree = "<group>";
@@ -151,8 +157,10 @@
 			files = (
 				0942A9B62677892A008AF4CF /* BaseTabBarController.swift in Sources */,
 				0942A9B82677913F008AF4CF /* AppSearchController.swift in Sources */,
+				0942A9C6267910CD008AF4CF /* SearchResult.swift in Sources */,
 				0942A9A02674C2B2008AF4CF /* ViewController.swift in Sources */,
 				0942A99C2674C2B2008AF4CF /* AppDelegate.swift in Sources */,
+				0942A9C8267A1D48008AF4CF /* Service.swift in Sources */,
 				0942A9BA267795C4008AF4CF /* SearchResultCell.swift in Sources */,
 				0942A9BC2677AEE4008AF4CF /* UIView+Layout.swift in Sources */,
 				0942A99E2674C2B2008AF4CF /* SceneDelegate.swift in Sources */,
