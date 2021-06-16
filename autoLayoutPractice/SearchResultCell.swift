@@ -9,12 +9,30 @@ import UIKit
 
 class SearchResultCell: UICollectionViewCell {
     
+    var appResult: Result! {
+        didSet {
+            nameLabel.text = appResult.trackName
+            categoryLabel.text = appResult.primaryGenreName
+            ratingLabel.text = "Rating: \(appResult.averageUserRating ?? 0)"
+            appIconImage.sd_setImage(with: URL(string: appResult.artworkUrl100))
+            screenShot1ImageView.sd_setImage(with: URL(string: appResult.screenshotUrls[0]))
+            
+            if appResult.screenshotUrls.count > 1 {
+                screenShot2ImageView.sd_setImage(with: URL(string: appResult.screenshotUrls[1]))
+            }
+            if appResult.screenshotUrls.count > 2 {
+                screenShot3ImageView.sd_setImage(with: URL(string: appResult.screenshotUrls[2]))
+            }
+        }
+    }
+    
     let appIconImage: UIImageView = {
         let iv = UIImageView()
-        iv.backgroundColor = .yellow
+//        iv.backgroundColor = .yellow
         iv.widthAnchor.constraint(equalToConstant: 64).isActive = true
         iv.heightAnchor.constraint(equalToConstant: 64).isActive = true
         iv.layer.cornerRadius = 12
+        iv.clipsToBounds = true
         return iv
     }()
     
@@ -55,7 +73,11 @@ class SearchResultCell: UICollectionViewCell {
     
     func createScreenshotImageView() -> UIImageView {
         let screenShotImageView = UIImageView()
-        screenShotImageView.backgroundColor = .green
+//        screenShotImageView.backgroundColor = .green
+        screenShotImageView.layer.cornerRadius = 8
+        screenShotImageView.clipsToBounds = true
+        screenShotImageView.layer.borderWidth = 0.5
+        screenShotImageView.layer.borderColor = UIColor(white: 0.5, alpha: 0.5).cgColor
         return screenShotImageView
     }
     
