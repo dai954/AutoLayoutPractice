@@ -28,6 +28,7 @@
 		09690C62268602350003FDC2 /* VerticalStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09690C61268602350003FDC2 /* VerticalStackView.swift */; };
 		09690C6426863FE40003FDC2 /* AppsPageHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09690C6326863FE40003FDC2 /* AppsPageHeader.swift */; };
 		09690C6626864C6A0003FDC2 /* AppsHeaderHorizontalController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09690C6526864C6A0003FDC2 /* AppsHeaderHorizontalController.swift */; };
+		09690C6826873B510003FDC2 /* AppsHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09690C6726873B510003FDC2 /* AppsHeaderCell.swift */; };
 		38D3FA6D4F102040230ED547 /* Pods_autoLayoutPractice.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D2B0046077AED2B304BE7E0 /* Pods_autoLayoutPractice.framework */; };
 /* End PBXBuildFile section */
 
@@ -56,6 +57,7 @@
 		09690C61268602350003FDC2 /* VerticalStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerticalStackView.swift; sourceTree = "<group>"; };
 		09690C6326863FE40003FDC2 /* AppsPageHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppsPageHeader.swift; sourceTree = "<group>"; };
 		09690C6526864C6A0003FDC2 /* AppsHeaderHorizontalController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppsHeaderHorizontalController.swift; sourceTree = "<group>"; };
+		09690C6726873B510003FDC2 /* AppsHeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppsHeaderCell.swift; sourceTree = "<group>"; };
 		0D2B0046077AED2B304BE7E0 /* Pods_autoLayoutPractice.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_autoLayoutPractice.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2088D8EE76E8925027F24FEE /* Pods-autoLayoutPractice.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-autoLayoutPractice.debug.xcconfig"; path = "Target Support Files/Pods-autoLayoutPractice/Pods-autoLayoutPractice.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -161,6 +163,7 @@
 				09690C5C2685F6550003FDC2 /* AppRowCell.swift */,
 				09690C6326863FE40003FDC2 /* AppsPageHeader.swift */,
 				09690C6526864C6A0003FDC2 /* AppsHeaderHorizontalController.swift */,
+				09690C6726873B510003FDC2 /* AppsHeaderCell.swift */,
 			);
 			path = Apps;
 			sourceTree = "<group>";
@@ -329,6 +332,7 @@
 				09690C602685F96A0003FDC2 /* Extensions.swift in Sources */,
 				0942A9BA267795C4008AF4CF /* SearchResultCell.swift in Sources */,
 				0942A9BC2677AEE4008AF4CF /* UIView+Layout.swift in Sources */,
+				09690C6826873B510003FDC2 /* AppsHeaderCell.swift in Sources */,
 				09690C62268602350003FDC2 /* VerticalStackView.swift in Sources */,
 				0942A9ED267E5188008AF4CF /* AppsHorizontalController.swift in Sources */,
 				0942A99E2674C2B2008AF4CF /* SceneDelegate.swift in Sources */,
